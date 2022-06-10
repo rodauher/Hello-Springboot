@@ -1,4 +1,3 @@
-
 package com.example.restservice;
 
 		import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -15,7 +14,7 @@ package com.example.restservice;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class GreetingControllerTests {
+class RestServiceApplicationTests {
 
 	@Autowired
 	private MockMvc mockMvc;
@@ -43,4 +42,11 @@ class GreetingControllerTests {
 				.andExpect(jsonPath("$.content").value("Hello, Spring Community!"));
 	}
 
+	@Test
+	void testRoot() {
+	}
+
+	@Test
+	void greeting() {
+	}
 }
