@@ -4,7 +4,10 @@ pipeline {
         stage('Build') {
             steps {
                 //git branch: 'main', url: 'https://github.com/rodauher/Hello-Springboot.git'
+                //sh "./gradlew test assemble"
+                withGradle {
                 sh "./gradlew test assemble"
+                }
             }
             post {
                 success {
